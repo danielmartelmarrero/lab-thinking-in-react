@@ -5,15 +5,17 @@ function ProductTable(props) {
   return (
     <div>
         <table>
-            <tr>
+            <thead>
                 <th>Name</th>
                 <th>Price</th>
-            </tr>
+            </thead>
+            <tbody>
             {props.products.map(oneProduct=>{
                 return (
                     <ProductRow product={oneProduct}/>
                 )
             })}
+            </tbody>
         </table>
     </div>
   )
